@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+
+    <EditText
+        android:id="@+id/adddevice_et_model"
+        android:layout_width="158dp"
+        android:layout_height="55dp"
+        android:hint="device model"
+        android:inputType="text"
+        android:textSize="25dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="219dp" />
+
+    <Spinner
+        android:id="@+id/adddevice_sp_typelist"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="28dp"
+
+        android:entries="@array/deviceType"
+        app:layout_constraintStart_toEndOf="@+id/adddevice_et_model"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="219dp" />
+
+    <EditText
+        android:id="@+id/adddevice_et_serial"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:hint="serial"
+        android:inputType="text"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/adddevice_et_model"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="45dp" />
+
+    <Button
+        android:id="@+id/adddevice_bt_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:onClick="deviceListPress"
+        android:text="Submit"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/adddevice_et_serial"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="147dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
